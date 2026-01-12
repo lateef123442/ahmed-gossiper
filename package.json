@@ -3,10 +3,17 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "next build",
     "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "lint": "next lint",
-    "start": "next start"
+    "test": "jest",
+    "test:e2e": "playwright test",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,md}\"",
+    "db:migrate": "node scripts/migrate.js",
+    "db:seed": "node scripts/seed-database.ts"
+
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
